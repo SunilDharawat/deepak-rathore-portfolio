@@ -108,7 +108,7 @@ const VideoEditorPortfolio = () => {
       role: "Lead Editor & Motion Graphics",
       software: ["After Effects", "Premiere Pro", "Cinema 4D"],
       thumbnail:
-        "https://images.unsplash.com/photo-1518709268805-4e9042af2176?w=600&h=400&fit=crop",
+        "https://images.unsplash.com/photo-1521291410923-42c74153b0f9?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       videoUrl:
         "https://sample-videos.com/zip/10/mp4/SampleVideo_1280x720_1mb.mp4",
       tags: ["Cyberpunk", "Motion Graphics", "Holographic", "Futuristic"],
@@ -257,13 +257,13 @@ const VideoEditorPortfolio = () => {
           />
 
           {/* Animated play button */}
-          <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-50 transition-all duration-500 flex items-center justify-center z-20">
+          <div className="absolute inset-0  bg-opacity-0 md:group-hover:bg-opacity-50 transition-all duration-500 flex items-center justify-center z-20">
             <button
               onClick={() => handleVideoModal(project)}
-              className="opacity-0 group-hover:opacity-100 transform scale-50 group-hover:scale-100 transition-all duration-500 bg-gradient-to-r from-white to-gray-100 rounded-full p-6 shadow-2xl hover:shadow-3xl relative overflow-hidden"
+              className="opacity-80 md:opacity-0 md:group-hover:opacity-100 transform scale-75 md:scale-50 md:group-hover:scale-100 transition-all duration-500 bg-gradient-to-r from-white to-gray-100 rounded-full p-4 md:p-6 shadow-2xl hover:shadow-3xl relative overflow-hidden"
             >
               <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-purple-600 opacity-0 hover:opacity-100 transition-opacity duration-300 rounded-full" />
-              <Play className="w-10 h-10 text-gray-800 hover:text-white ml-1 relative z-10 transition-colors duration-300" />
+              <Play className="w-8 h-8 md:w-10 md:h-10 text-gray-800 hover:text-white ml-1 relative z-10 transition-colors duration-300" />
 
               {/* Pulse effect */}
               <div className="absolute inset-0 bg-white rounded-full animate-ping opacity-20" />
@@ -272,11 +272,11 @@ const VideoEditorPortfolio = () => {
 
           {/* Floating stats */}
           <div className="absolute top-6 left-6 flex flex-col gap-2">
-            <span className="bg-black bg-opacity-80 backdrop-blur-sm text-white px-3 py-2 rounded-2xl text-sm font-semibold flex items-center gap-2 transform translate-x-[-100px] group-hover:translate-x-0 transition-transform duration-500">
+            <span className="bg-black bg-opacity-80 backdrop-blur-sm text-white px-3 py-2 rounded-2xl text-sm font-semibold flex items-center gap-2 transform translate-x-0 md:translate-x-[-100px] md:group-hover:translate-x-0 transition-transform duration-500">
               <Clock className="w-4 h-4" />
               {project.duration}
             </span>
-            <span className="bg-black bg-opacity-80 backdrop-blur-sm text-white px-3 py-2 rounded-2xl text-sm font-semibold flex items-center gap-2 transform translate-x-[-100px] group-hover:translate-x-0 transition-transform duration-700">
+            <span className="bg-black bg-opacity-80 backdrop-blur-sm text-white px-3 py-2 rounded-2xl text-sm font-semibold flex items-center gap-2 transform translate-x-0 md:translate-x-[-100px] md:group-hover:translate-x-0 transition-transform duration-700">
               <Eye className="w-4 h-4" />
               {project.views}
             </span>
@@ -367,9 +367,13 @@ const VideoEditorPortfolio = () => {
       <header className="relative z-40 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 bg-opacity-20 backdrop-blur-lg border-b border-white border-opacity-10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center py-6">
-            <div className="flex items-center space-x-4">
+            <div className="flex flex-col items-center  md:space-x-4 md:flex-row ">
               <div className="w-14 h-14 bg-gradient-to-r from-blue-500 to-purple-600 rounded-2xl flex items-center justify-center shadow-lg transform hover:scale-110 transition-transform duration-300">
-                <span className="text-white font-bold text-xl">DR</span>
+                <img
+                  src="/Aavtar.png"
+                  alt="Aavtar"
+                  className="w-12 h-12 rounded-full"
+                />
               </div>
               <div>
                 <h1 className="text-2xl font-bold text-white">
